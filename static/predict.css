@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "Alfa Slab One";
+  src: url("../fonts/AlfaSlabOne-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Albert Sans";
+  src: url("../fonts/AlbertSans-Regular.ttf") format("truetype");
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Albert Sans", sans-serif;
+}
+
+.background {
+  background-image: url('images/bg2.png'); /* replace bg2.png path as needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  background-color: #e8e5e5ed;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.title {
+  font-family: "Alfa Slab One", serif;
+  font-size: 2.5rem;
+  color: #3b3b38eb;
+  margin-bottom: 2rem;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.label {
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.button {
+  margin-top: 2rem;
+  background-color: #989540;
+  color: #ffffffba;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0px 5px 4px #00000040;
+  cursor: pointer;
+  display: inline-block;
+}

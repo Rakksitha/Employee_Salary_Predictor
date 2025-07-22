@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Salary Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='globals.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='predict.css') }}" />
+  </head>
+  <body>
+    <div class="background">
+      <div class="container">
+
+        <!-- Page Heading -->
+        <h1 class="title">Employee Salary Predictor</h1>
+
+        <!-- Prediction Form -->
+        <form method="POST" action="{{ url_for('predict') }}" class="form-box">
+
+          <label class="label" for="occupation">Occupation:</label>
+          <select name="occupation" required>
+            <option value="Tech-support">Tech-support</option>
+            <option value="Craft-repair">Craft-repair</option>
+            <option value="Other-service">Other-service</option>
+            <option value="Sales">Sales</option>
+            <option value="Exec-managerial">Exec-managerial</option>
+            <option value="Prof-specialty">Prof-specialty</option>
+            <option value="Handlers-cleaners">Handlers-cleaners</option>
+            <option value="Machine-op-inspct">Machine-op-inspct</option>
+            <option value="Adm-clerical">Adm-clerical</option>
+            <option value="Farming-fishing">Farming-fishing</option>
+            <option value="Transport-moving">Transport-moving</option>
+            <option value="Priv-house-serv">Priv-house-serv</option>
+            <option value="Protective-serv">Protective-serv</option>
+            <option value="Others">Others</option>
+          </select>
+
+          <label class="label" for="workclass">Workclass:</label>
+          <select name="workclass" required>
+            <option value="Private">Private</option>
+            <option value="Self-emp-not-inc">Self-emp-not-inc</option>
+            <option value="Self-emp-inc">Self-emp-inc</option>
+            <option value="Federal-gov">Federal-gov</option>
+            <option value="Local-gov">Local-gov</option>
+            <option value="State-gov">State-gov</option>
+            <option value="Not-Listed">Without-pay</option>
+          </select>
+
+          <label class="label" for="education">Education:</label>
+          <select name="education" required>
+            <option value="Bachelors">Bachelors</option>
+            <option value="Some-college">Some-college</option>
+            <option value="11th">11th</option>
+            <option value="HS-grad">HS-grad</option>
+            <option value="Prof-school">Prof-school</option>
+            <option value="Assoc-acdm">Assoc-acdm</option>
+            <option value="Assoc-voc">Assoc-voc</option>
+            <option value="9th">9th</option>
+            <option value="7th-8th">7th-8th</option>
+            <option value="12th">12th</option>
+            <option value="Masters">Masters</option>
+            <option value="10th">10th</option>
+            <option value="Doctorate">Doctorate</option>
+          </select>
+
+          <label class="label" for="age">Age:</label>
+          <input type="number" name="age" min="17" max="75" required />
+
+          <label class="label" for="gender">Gender:</label>
+          <select name="gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+
+          <label class="label" for="relationship">Relationship:</label>
+          <select name="relationship" required>
+            <option value="Wife">Wife</option>
+            <option value="Own-child">Own-child</option>
+            <option value="Husband">Husband</option>
+            <option value="Not-in-family">Not-in-family</option>
+            <option value="Other-relative">Other-relative</option>
+            <option value="Unmarried">Unmarried</option>
+          </select>
+
+          <label class="label" for="marital">Marital Status:</label>
+          <select name="marital" required>
+            <option value="Married-civ-spouse">Married-civ-spouse</option>
+            <option value="Divorced">Divorced</option>
+            <option value="Never-married">Never-married</option>
+            <option value="Separated">Separated</option>
+            <option value="Widowed">Widowed</option>
+            <option value="Married-spouse-absent">Married-spouse-absent</option>
+          </select>
+
+          <label class="label" for="race">Race:</label>
+          <select name="race" required>
+            <option value="White">White</option>
+            <option value="Asian-Pac-Islander">Asian-Pac-Islander</option>
+            <option value="Amer-Indian-Eskimo">Amer-Indian-Eskimo</option>
+            <option value="Other">Other</option>
+            <option value="Black">Black</option>
+          </select>
+
+          <label class="label" for="country">Native Country:</label>
+          <select name="country" required>
+            <option value="">-- Select Country --</option>
+            <option value="United-States">United States</option>
+            <option value="Not-Listed">Not-Listed</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Philippines">Philippines</option>
+            <option value="Germany">Germany</option>
+            <option value="Canada">Canada</option>
+            <option value="Puerto-Rico">Puerto Rico</option>
+            <option value="India">India</option>
+            <option value="England">England</option>
+            <option value="Cuba">Cuba</option>
+            <option value="China">China</option>
+            <option value="South">South</option>
+            <option value="El-Salvador">El Salvador</option>
+            <option value="Jamaica">Jamaica</option>
+            <option value="Japan">Japan</option>
+            <option value="Italy">Italy</option>
+            <option value="Dominican-Republic">Dominican Republic</option>
+            <option value="Poland">Poland</option>
+            <option value="Columbia">Columbia</option>
+            <option value="Vietnam">Vietnam</option>
+            <option value="Haiti">Haiti</option>
+            <option value="Guatemala">Guatemala</option>
+            <option value="Taiwan">Taiwan</option>
+            <option value="Iran">Iran</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Greece">Greece</option>
+            <option value="Peru">Peru</option>
+            <option value="Nicaragua">Nicaragua</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="France">France</option>
+            <option value="Ireland">Ireland</option>
+            <option value="Thailand">Thailand</option>
+            <option value="Hong">Hong</option>
+            <option value="Cambodia">Cambodia</option>
+            <option value="Trinadad&Tobago">Trinidad & Tobago</option>
+            <option value="Outlying-US(Guam-USVI-etc)">Outlying US (Guam, USVI, etc)</option>
+            <option value="Yugoslavia">Yugoslavia</option>
+            <option value="Scotland">Scotland</option>
+            <option value="Laos">Laos</option>
+            <option value="Hungary">Hungary</option>
+            <option value="Honduras">Honduras</option>
+            <option value="Holand-Netherlands">Netherlands</option>
+          </select>
+
+          <label class="label" for="hours">Hours Per Week:</label>
+          <input type="number" name="hours" min="25" max="60" required />
+
+          <label class="label" for="gain">Capital Gain:</label>
+          <input type="number" name="gain" min="0" required />
+
+          <label class="label" for="loss">Capital Loss:</label>
+          <input type="number" name="loss" min="0" required />
+
+          <button type="submit" class="button">Predict</button>
+        </form>
+
+        {% if prediction_text %}
+          <div style="font-size: 28px; font-weight: bold; color: rgb(31, 31, 31); padding: 20px; width: fit-content; margin: auto;">
+              {{ prediction_text }}
+          </div>
+        {% endif %}
+
+
+      </div>
+    </div>
+  </body>
+</html>

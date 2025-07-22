@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Salary Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='globals.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container-fluid text-center d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
+    <div id="title">Employee Salary Prediction</div>
+    <div id="subtitle">Predict your salary to analyze and improve your professional game in this business world now.</div>
+
+    <a href="{{ url_for('predict') }}" class="button">Let's Predict</a>
+  </div>
+
+</body>
+</html>
