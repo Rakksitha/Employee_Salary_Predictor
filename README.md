@@ -45,6 +45,21 @@ Check it out: https://employee-salary-predictor-vo4z.onrender.com
 | Deployment       | Render                             |
 | Model Storage    | Joblib (.pkl files)                |
 
+##  User Interface Preview
+
+### Home Page
+![Home Page](static/images/home.png)
+
+### Prediction Page
+![Prediction Form](static/images/form.png)
+
+### Output Result
+![Prediction Result](static/images/result.png)
+
+### Mobile View
+![Mobile View](static/images/mobile.png)
+
+
 ## Installation
 
 ### Prerequisites
@@ -94,19 +109,6 @@ Check it out: https://employee-salary-predictor-vo4z.onrender.com
           │   └── AlbertSans-Regular.ttf
           └── images/
               └── bg2.png
-## 💻 User Interface Preview
-
-### Home Page
-![Home Page](static/images/home.png)
-
-### Prediction Page
-![Prediction Form](static/images/form.png)
-
-### Output Result
-![Prediction Result](static/images/result.png)
-
-### Mobile View
-![Mobile View](static/images/mobile.png)
 
 ## Results Summary
 
