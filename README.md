@@ -94,6 +94,19 @@ Check it out: https://employee-salary-predictor-vo4z.onrender.com
           │   └── AlbertSans-Regular.ttf
           └── images/
               └── bg2.png
+## 💻 User Interface Preview
+
+### Home Page
+![Home Page](static/images/home.png)
+
+### Prediction Page
+![Prediction Form](static/images/form.png)
+
+### Output Result
+![Prediction Result](static/images/result.png)
+
+### Mobile View
+![Mobile View](static/images/mobile.png)
 
 ## Results Summary
 
@@ -102,11 +115,14 @@ Check it out: https://employee-salary-predictor-vo4z.onrender.com
 - Frontend Design: Figma → HTML/CSS prototype successfully implemented
 - Cross-Device Support: Desktop and mobile friendly
 
+### Model Performance
+![Model Accuracy](static/images/accuracy.png)
+
 
 ## Author
-Rakksitha R
-AI & ML Enthusiast | Student @ Sona College of Technology
-📬 https://www.linkedin.com/in/rakksitha-r-85a3b031a
+Rakksitha R<br>
+AI & ML Enthusiast | Student @ Sona College of Technology<br>
+📬 https://www.linkedin.com/in/rakksitha-r-85a3b031a<br>
 
 ## License
 This project is open-source and free to use for educational purposes.
